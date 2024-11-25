@@ -3,38 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multi-Step Data Export Widget</title>
+    <title>Dynamic Multi-Step Data Export</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="step-container">
+        <!-- Step 1 -->
         <div id="step-1" class="step active">
             <h2>Step 1: Select Data Table</h2>
-            <select id="table-select">
-                <option value="Table1">Table 1</option>
-                <option value="Table2">Table 2</option>
-            </select>
+            <div id="table-selection">
+                <!-- Tables will be dynamically loaded here -->
+            </div>
             <button onclick="nextStep(2)">Next</button>
         </div>
 
+        <!-- Step 2 -->
         <div id="step-2" class="step">
-            <h2>Step 2: Preview Selected Data</h2>
+            <h2>Step 2: Preview Selected Table</h2>
             <div id="table-preview"></div>
             <button onclick="previousStep(1)">Previous</button>
             <button onclick="nextStep(3)">Next</button>
         </div>
 
+        <!-- Step 3 -->
         <div id="step-3" class="step">
             <h2>Step 3: Select Rows and Columns</h2>
-            <div id="column-row-select">
-                <!-- Columns and rows checkboxes will be populated here -->
-            </div>
+            <div id="dynamic-table-selection"></div>
             <button onclick="previousStep(2)">Previous</button>
             <button onclick="nextStep(4)">Next</button>
         </div>
 
+        <!-- Step 4 -->
         <div id="step-4" class="step">
-            <h2>Step 4: Confirm and Download</h2>
+            <h2>Step 4: Confirm Selection and Download</h2>
             <div id="final-preview"></div>
             <button onclick="previousStep(3)">Previous</button>
             <button onclick="confirmDownload()">Download</button>
