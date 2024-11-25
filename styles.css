@@ -1,5 +1,5 @@
 .step-container {
-    width: 300px;
+    width: 80%;
     margin: auto;
     padding: 20px;
     border: 1px solid #ccc;
@@ -14,6 +14,28 @@
     display: block;
 }
 
-button {
+table {
+    width: 100%;
+    border-collapse: collapse;
     margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f4f4f4;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: #d1e7fd !important;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
 }
